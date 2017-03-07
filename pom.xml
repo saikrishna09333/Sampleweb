@@ -54,6 +54,12 @@
         <jackson.version>2.3.3</jackson.version>
         <titan.version>0.4.2</titan.version>
     </properties>
+   <distributionManagement>
+      <snapshotRepository><
+         id>nexus</id>
+         <url>http://localhost:8081/nexus/content/repositories/snapshots</url>
+      </snapshotRepository>
+   </distributionManagement>
 
     <build>
         <finalName>marmotta</finalName>
@@ -113,6 +119,16 @@
                         <!-- <backgroundProcessorDelay>10</backgroundProcessorDelay> -->
                     </configuration>
                 </plugin>
+               <plugin>
+                  <groupId>org.sonatype.plugins</groupId>
+                  <artifactId>nexus-staging-maven-plugin</artifactId>
+                  <version>1.6.3</version>
+                  <extensions>true</extensions>
+                  <configuration>
+                     <serverId>nexus</serverId>
+                     <nexusUrl>http://localhost:8081/nexus/</nexusUrl>
+                  </configuration>
+               </plugin>
             </plugins>
         </pluginManagement>
         <resources>

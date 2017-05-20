@@ -96,6 +96,17 @@
                         <archiveClasses>false</archiveClasses>
                     </configuration>
                 </plugin>
+               <plugin>
+                       <groupId>org.codehaus.mojo</groupId>
+                       <artifactId>cobertura-maven-plugin</artifactId>
+                       <version>2.7</version>
+                       <configuration>
+                          <formats>
+                             <format>html</format>
+                             <format>xml</format>
+                           </formats>
+                        </configuration>
+               </plugin>
                 <plugin>
                     <artifactId>maven-deploy-plugin</artifactId>
                     <version>2.7</version>

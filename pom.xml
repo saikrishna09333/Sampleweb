@@ -83,12 +83,14 @@
                         <forkMode>always</forkMode>
                     </configuration>
                 </plugin>
+               <reporting>
                <plugin>  
             <groupId>org.codehaus.mojo</groupId>  
             <artifactId>cobertura-maven-plugin</artifactId>  
             <version>2.5.2</version>  
             <configuration>  
-                <formats>  
+                <formats> 
+                    <format>html</format>
                     <format>xml</format>  
                 </formats>  
             </configuration>  
@@ -100,7 +102,8 @@
                     </goals>  
                 </execution>  
             </executions>  
-           </plugin>         
+           </plugin>
+               </reporting>
                 <plugin>
                     <artifactId>maven-war-plugin</artifactId>
                     <version>2.3</version>

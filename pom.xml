@@ -64,8 +64,7 @@
     <build>
         <finalName>marmotta</finalName>
         <pluginManagement>
-           <reporting>
-            <plugins>
+           <plugins>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
@@ -88,22 +87,8 @@
                <plugin>  
             <groupId>org.codehaus.mojo</groupId>  
             <artifactId>cobertura-maven-plugin</artifactId>  
-            <version>2.5.2</version>  
-            <configuration>  
-                <formats> 
-                    <format>html</format>
-                    <format>xml</format>  
-                </formats>  
-            </configuration>  
-            <executions>  
-                <execution>  
-                    <phase>package</phase>  
-                    <goals>  
-                        <goal>cobertura</goal>  
-                    </goals>  
-                </execution>  
-            </executions>  
-           </plugin>
+            <version>2.7</version>  
+               </plugin>
                
                 <plugin>
                     <artifactId>maven-war-plugin</artifactId>
@@ -152,8 +137,7 @@
                   </configuration>
                </plugin>
             </plugins>
-            </reporting>
-        </pluginManagement>
+            </pluginManagement>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
@@ -248,6 +232,15 @@
             </plugin>
         </plugins>
     </build>
+   <reporting>
+      <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>cobertura-maven-plugin</artifactId>
+        <version>2.7</version>
+      </plugin>
+     </plugins>
+  </reporting>
 
     <profiles>
 

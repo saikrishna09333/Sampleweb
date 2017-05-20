@@ -64,6 +64,7 @@
     <build>
         <finalName>marmotta</finalName>
         <pluginManagement>
+           <reporting>
             <plugins>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -151,6 +152,7 @@
                   </configuration>
                </plugin>
             </plugins>
+            </reporting>
         </pluginManagement>
         <resources>
             <resource>

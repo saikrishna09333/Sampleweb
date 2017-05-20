@@ -96,7 +96,11 @@
                         <archiveClasses>false</archiveClasses>
                     </configuration>
                 </plugin>
-               <plugin>
+               <profiles>
+                  <profile>
+                     <id>metrics</id>
+                     <build>
+                        <plugin>
                        <groupId>org.codehaus.mojo</groupId>
                        <artifactId>cobertura-maven-plugin</artifactId>
                        <version>2.7</version>
@@ -107,6 +111,9 @@
                            </formats>
                         </configuration>
                </plugin>
+               </build>
+               </profile>
+               </profiles>   
                 <plugin>
                     <artifactId>maven-deploy-plugin</artifactId>
                     <version>2.7</version>
